@@ -2,12 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Mjuu</h1>
-    <p>This is the homepage of my website</p>
-    <img src="assests\pictures\13-3-5268730.avif" alt="joku kuva">
+    <main>
+        <article>
+            <h1>Martti Hemminki</h1>
+            <p>Oon Martti, asun Oulussa. Torniosta kotoisin.</p>
+            <ul>
+                <b>Harrastuksia</b>
+                <li>Bouldering</li>
+                <li>Laskettelu</li>
+                <li>Pyöräily</li>
+                <li>Anime</li>
+                <li>Nörtteily</li>
+                <li>Videopelit</li>
+            </ul>
+
+            <img src="https://cdn.discordapp.com/attachments/1133188205684985956/1293702040744230922/RDT_20241010_0129325453773805837866808.jpg?ex=6708556a&is=670703ea&hm=1e533bf0d4b119924b92ff20a5c7e4a512325ec21e7abdc69368336cff6bbde1&" alt="No hentai"> 
+            <br>
+            <button id="waifubutton">jeb</button>
+            <br>
+            <img id="waifupic" width="500px">
+
+            <form class="form">
+                <input name="message" type="text" placeholder="message">
+                <button type="submit">Submit</button>
+            </form>
+
+
+
+
+        </article>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAGi3KvGGCfJdHqyB080KfU2Fkd2ClLd4Q",
+          authDomain: "testpage-ddfbc.firebaseapp.com",
+          projectId: "testpage-ddfbc",
+          storageBucket: "testpage-ddfbc.appspot.com",
+          messagingSenderId: "681282679270",
+          appId: "1:681282679270:web:731c73bcf2efb0ed5f2627",
+          measurementId: "G-SS06REQ6HP"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
-</html> 
+</html>
