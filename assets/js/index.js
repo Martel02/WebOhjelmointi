@@ -1,6 +1,6 @@
 const apiUrl = 'https://api.waifu.pics/sfw/neko';
 const imgElement = document.getElementById("waifupic");
-const button = document.getElementById("waifubutton");
+const waifuButton = document.getElementById("waifubutton");
 const formEl = document.querySelector('.form');
 var url = 'https://graphql.anilist.co'
 var webhookUrl = "https://prod-208.westeurope.logic.azure.com:443/workflows/b0345be27b304b25a0bee3f04e61f75a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=em2PU-GgQ6o3WUY8VrKHivpbhOlC8wIkDJbfKF1YVog";
@@ -120,9 +120,26 @@ function handleData(data) {
 function handleError(error) {
     alert('Error, check console');
     console.error(error);
+
 }
 
-button.addEventListener('click', AniListAPI);
-window.onload = getWaifu;
+waifuButton.addEventListener('click', AniListAPI);
+
+window.onload = function() {
+    getWaifu();
+    var table = document.getElementById("2");
+    table.textContent = "moi";
+}
+
+function insertIntoTable() {
+
+    var tableArray = [1, "RealKamiSama"]
+    var table = document.getElementById("1");
+
+    for(let i = 0; i < 2; i++) {
+        cell.textContent = tableArray[i];
+    }
+}
+
 
 console.log('Hello World');
