@@ -6,7 +6,6 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="/assets/css/home.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
-
 </head>
 
 <body>
@@ -26,8 +25,16 @@
     
     <main>
         <article>
-            <h1>Martti Hemminki</h1>
-            <p>Oon Martti, asun Oulussa. Torniosta kotoisin.</p>
+            <div class="">
+                <h1>Martti Hemminki</h1>
+                <p>Oon Martti, asun Oulussa. Torniosta kotoisin.</p>
+                <div class="lampotila">
+                    <p>Lämpötila oulussa tällä hetkellä:</p>
+                    <p id="lampo"></p>
+                    <p>°C</p>
+                </div>
+            </div>
+            
             <ul>
                 <b>Harrastuksia</b>
                 <li>Bouldering</li>
@@ -45,7 +52,7 @@
             <br>
             <button id="waifubutton">jeb</button>
             <br>
-            <img id="waifupic" width="500px">
+            <img loading=lazy id="waifupic" width="500px">
 
             <form class="form">
                 <input name="message" type="text" placeholder="message">
@@ -63,7 +70,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/home.js"></script>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";

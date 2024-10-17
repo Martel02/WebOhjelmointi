@@ -2,8 +2,12 @@ const apiUrl = 'https://api.waifu.pics/sfw/neko';
 const imgElement = document.getElementById("waifupic");
 const waifuButton = document.getElementById("waifubutton");
 const formEl = document.querySelector('.form');
-var url = 'https://graphql.anilist.co'
-var webhookUrl = "https://prod-208.westeurope.logic.azure.com:443/workflows/b0345be27b304b25a0bee3f04e61f75a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=em2PU-GgQ6o3WUY8VrKHivpbhOlC8wIkDJbfKF1YVog";
+const lampo = document.getElementById("lampo")
+const url = 'https://graphql.anilist.co'
+const lampoUrl = "https://api.open-meteo.com/v1/forecast?latitude=65.0124&longitude=25.4682&current=temperature_2m&hourly=&timezone=auto&forecast_days=1";
+const webhookUrl = "https://prod-208.westeurope.logic.azure.com:443/workflows/b0345be27b304b25a0bee3f04e61f75a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=em2PU-GgQ6o3WUY8VrKHivpbhOlC8wIkDJbfKF1YVog";
+
+console.log(waifuButton);
 
 function getWaifu() {
   fetch(apiUrl)
@@ -13,6 +17,18 @@ function getWaifu() {
     })
     .catch((error) => {
       console.error('Error fetching weeb picture:', error);
+    });
+}
+
+function getWeather() {
+    fetch(lampoUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.current.temperature_2m);
+      lampo.innerText = data.current.temperature_2m;
+    })
+    .catch((error) => {
+      console.error('Error fetching temperature:', error);
     });
 }
 
@@ -44,17 +60,6 @@ formEl.addEventListener('submit', event => {
         ]
     }  
 
-/*
-    webhookOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        body: JSON.stringify({formatted_Card})
-    };
-*/
-
     axios.post(webhookUrl, formatted_Card)
     .then((response) => {
         console.log(response);
@@ -62,12 +67,7 @@ formEl.addEventListener('submit', event => {
     .catch((error) => {
         console.error('Error sending message:', error);
     });
-    
-/*
-  fetch(webhookUrl, webhookOptions).then(handleResponse)
-  .then(handleData)
-  .catch(handleError);
-*/
+
 
 });
 
@@ -107,7 +107,7 @@ function AniListAPI() {
 }
 
 function handleResponse(response) {
-    return response.json().then(function (json) {
+    return response.json().then((json) => {
         return response.ok ? json : Promise.reject(json);
     });
 }
@@ -125,21 +125,10 @@ function handleError(error) {
 
 waifuButton.addEventListener('click', AniListAPI);
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() { 
     getWaifu();
-    var table = document.getElementById("2");
-    table.textContent = "moi";
-}
+    getWeather();
+});
 
-function insertIntoTable() {
-
-    var tableArray = [1, "RealKamiSama"]
-    var table = document.getElementById("1");
-
-    for(let i = 0; i < 2; i++) {
-        cell.textContent = tableArray[i];
-    }
-}
-
-
-console.log('Hello World');
+const parsehtml = new DOMParser().parseFromString("<h1>moro</h1>", "text/html");
+document.body.appendChild(parsehtml.body.firstChild);

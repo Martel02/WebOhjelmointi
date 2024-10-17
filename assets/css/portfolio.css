@@ -1,94 +1,74 @@
 * {
   box-sizing: border-box;
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}  
-/* Navbar styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #5c438e; 
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  color: #fff;
-}
-
-.navbar-logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 16px;
-}
-
-.navbar-links a:hover {
-  background-color: #555;
-  border-radius: 5px;
-}
-/* Hamburger menu for mobile */
-.hamburger {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.active {
-  display: flex;
-  flex-direction: column;
-}
-
-table {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-collapse: collapse;
-  border-bottom: 1px solid #000000;
-  width: 100%;
-}
-
-tr:nth-child(even) {
-  background-color: #00b9b9;
-}
-
-tr:nth-child(odd) {
-  background-color: #00d423;
-}
-
-.toprow {
-  border-top: 1px solid #000000;
-}
-
-th {
-  padding: 8px;
-  text-align: center;
-}
-
-td {
-  padding: 8px;
-  text-align: center;
-  border-right: 1px solid #000000;
   
 }
 
-tr:hover {
-  background-color: #D6EEEE;
+  /* General body styling */
+  body {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;;
+    background-color: #3d334c;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #8883b8;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5em;
+    color: #504772;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: #504772;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
+
+  }
+  
+  .navbar-links a:hover {
+    background-color: #ffffff44;
+    border-radius: 5px;
+  }
+  
+  /* Hamburger menu for mobile */
+  .hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .active {
+    display: flex;
+    flex-direction: column;
+  }
+
+.loading {
+  font-size: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

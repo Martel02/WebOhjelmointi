@@ -1,60 +1,73 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}  
-/* Navbar styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #5c438e;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  color: #fff;
+* {
+  box-sizing: border-box;
+  
 }
 
-.navbar-logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
+  /* General body styling */
+  body {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #3d334c;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #8883b8;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5em;
+    color: #504772;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: #504772;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: bold;
 
-.navbar-links {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 16px;
-}
-
-.navbar-links a:hover {
-  background-color: #555;
-  border-radius: 5px;
-}
-
-/* Hamburger menu for mobile */
-.hamburger {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.active {
-  display: flex;
-  flex-direction: column;
-}
+  }
+  
+  .navbar-links a:hover {
+    background-color: #ffffff44;
+    border-radius: 5px;
+  }
+  
+  /* Hamburger menu for mobile */
+  .hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .active {
+    display: flex;
+    flex-direction: column;
+  }
 h1 {
-  color: #3700ff;
+  color: #f4bfff;
+  text-align: center;
+}
+p {
+  text-align: center;
 }
 ul {
   text-align: left;
@@ -83,3 +96,10 @@ img {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+.lampotila {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+#8883b8

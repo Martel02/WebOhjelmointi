@@ -3,12 +3,13 @@
   
 }
 
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
+  /* General body styling */
+  body {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
     margin: 0;
     padding: 0;
-    height: 200vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;;
     background-color: #3d334c;
@@ -28,7 +29,7 @@ body {
   
   .navbar-logo {
     font-size: 1.5em;
-    color: #63598a;
+    color: #504772;
     font-weight: bold;
   }
   
@@ -38,7 +39,7 @@ body {
   }
   
   .navbar-links a {
-    color: #63598a;
+    color: #504772;
     text-decoration: none;
     padding: 8px 16px;
     font-weight: bold;
@@ -72,8 +73,9 @@ body {
 
   .title-container {
     display: flex;
-    gap: 38vw;
-    padding-left: 21vw;
+    font-size: large;
+    gap: 37vw;
+    padding-left: 20vw;
     color: #bd96c5;
   }
   
@@ -87,7 +89,7 @@ body {
     padding-left: 90px;
     flex-grow: 1;
     max-width: 45vw; /* Adjust width as needed */
-    max-height: calc(100vh - 80px); /* Ensures gallery fits within the screen height (subtracts navbar and margins) */
+    max-height: calc(100vh - 155px); /* Ensures gallery fits within the screen height (subtracts navbar and margins) */
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -164,12 +166,12 @@ body {
   tr:nth-child(odd) {
     background-color: #63598a;
   }
-      
+  
   th {
     padding: 8px;
     font-size: large;
     font-weight: bolder;
-    text-align: center;
+    text-align: left;
     color: #f8d4ff;
     border-bottom: 2px solid #000000;
 
@@ -177,10 +179,10 @@ body {
   
   td {
     padding: 8px;
-    text-align: center;
+    text-align: left;
     color: #f4bfff;
   }
   
   tr:hover {
-    background-color: #0b1622;
+    background-color: #ffffff00;
   }
