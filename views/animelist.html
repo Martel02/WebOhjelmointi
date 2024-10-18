@@ -7,7 +7,6 @@
   <title>Anime</title>
   <link rel="stylesheet" href="/assets/css/animelist.css">
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
-
 </head>
 <body>
 
@@ -24,12 +23,9 @@
         </nav>
     </header>
 
-    <div class="title-container">
-        <h1>Anime 3x3</h1>
-        <h1>Peak manga</h1>
-    </div>
-    <div class="container">
-        <div class="gallery-flex">
+    <div class="grid-table-container">
+        <div class="gallery-container">
+            <div class="anime3x3-title"><h1>Anime 3x3</h1></div>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="/assets/images/frieren.jpg" alt="Sousou no frieren">
@@ -77,22 +73,31 @@
                 </div>
             </div>
         </div>
-        
-        <table id="joo">
-            <th>Rank</th><th>Name</th>
-            <tr><td id="1">Lorem</td><td id="2">ipsum</td></tr>
-            <tr><td id="3">dolor</td><td id="4">sit</td></tr>
-            <tr><td id="5">amet</td><td id="6">consectetur</td></tr>
-            <tr><td id="7">adipiscing</td><td id="8">elit</td></tr>
-            <tr><td id="9">sed</td><td id="10">do</td></tr>
-            <tr><td id="11">eiusmod</td><td id="12">tempor</td></tr>
-            <tr><td id="13">incididunt</td><td id="14">ut</td></tr>
-            <tr><td id="15">labore</td><td id="16">et</td></tr>
-            <tr><td id="17">dolore</td><td id="18">magna</td></tr>
-            <tr><td id="19">aliqua</td><td id="20">Ut</td></tr>
-        </table> 
+
+        <div class="table-container">
+            <h1 id="peak-manga-title">Peak manga</h1>
+            <table id="joo">
+                <thead>
+                    <tr>
+                        <th>Rank</th><th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td id="1">Lorem</td><td id="2">ipsum</td></tr>
+                    <tr><td id="3">dolor</td><td id="4">sit</td></tr>
+                    <tr><td id="5">amet</td><td id="6">consectetur</td></tr>
+                    <tr><td id="7">adipiscing</td><td id="8">elit</td></tr>
+                    <tr><td id="9">sed</td><td id="10">do</td></tr>
+                    <tr><td id="11">eiusmod</td><td id="12">tempor</td></tr>
+                    <tr><td id="13">incididunt</td><td id="14">ut</td></tr>
+                    <tr><td id="15">labore</td><td id="16">et</td></tr>
+                    <tr><td id="17">dolore</td><td id="18">magna</td></tr>
+                    <tr><td id="19">aliqua</td><td id="20">Ut</td></tr>
+                </tbody>
+            </table> 
+        </div>
     </div>
-    <div id="linkki"></div>
+
     <script src="/assets/js/animelist.js"></script>
 </body>
 </html>

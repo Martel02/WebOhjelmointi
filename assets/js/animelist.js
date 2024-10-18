@@ -1,4 +1,4 @@
-const table = document.getElementById("joo")
+const table = document.getElementById("joo");
 const linkki = document.getElementById("linkki");
 
 function joo() {
@@ -13,6 +13,12 @@ function insertIntoTable() {
         cell.innerHTML = array[i];
     }
 }
+
+document.getElementById('hamburger').addEventListener('click', function() {
+    var navbarLinks = document.getElementById('navbarLinks');
+    navbarLinks.classList.toggle('active');
+});
+  
 
 window.onload = function() {
     insertIntoTable()

@@ -63,52 +63,58 @@
     flex-direction: column;
   }
 
-  .container {
+  .grid-table-container {
     display: flex;
-    justify-content: space-between; /* Optional: to add space between them */
-    padding: 20px;
-    box-sizing: border-box;
+    flex-wrap: wrap;
     gap: 10vw;
-  }
-
-  .title-container {
-    display: flex;
-    font-size: large;
-    gap: 37vw;
-    padding-left: 20vw;
-    color: #bd96c5;
+    align-content: center;
+    justify-content: center;
   }
   
-  /* Gallery container */
+  .gallery-container {
+    text-align: center;
+    justify-content: center;
+
+  }
+
+  .table-container {
+    text-align: center;
+    justify-content: center;
+  }
+  
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-template-rows: repeat(3, 1fr); /* 3 rows */
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, auto));
+    grid-template-rows: repeat(3, minmax(0, auto));
     gap: 20px;
-    padding: 20px;
-    padding-left: 90px;
     flex-grow: 1;
-    max-width: 45vw; /* Adjust width as needed */
-    max-height: calc(100vh - 155px); /* Ensures gallery fits within the screen height (subtracts navbar and margins) */
-    margin: 0 auto;
+    max-height: calc(100vh - 155px); 
+    margin: 0;
     box-sizing: border-box;
   }
   
   /* Each gallery item */
   .gallery-item {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 250px;
+    width: 250px;
   }
   
   /* Images take all the available space inside their box */
   .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    object-fit: cover; 
+    grid-row: 1;
+    grid-column: 1;
   }
   
   /* Caption styling */
@@ -119,6 +125,8 @@
     font-size: 1.1em;
     color:  #f4bfff;
     flex-shrink: 0;
+    grid-row: 3;
+    grid-column: 1;
   }
   
   /* Responsive design for smaller screens */
@@ -133,20 +141,6 @@
       display: block;
     }
   
-    .gallery {
-      gap: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .gallery {
-      gap: 5px;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-      margin: 10px 0;
-    }
   }
   
   table {
@@ -169,8 +163,8 @@
   
   th {
     padding: 8px;
-    font-size: large;
-    font-weight: bolder;
+    font-size: xx-large;
+    font-weight: bold;
     text-align: left;
     color: #f8d4ff;
     border-bottom: 2px solid #000000;
@@ -179,6 +173,7 @@
   
   td {
     padding: 8px;
+    font-size: x-large;
     text-align: left;
     color: #f4bfff;
   }
