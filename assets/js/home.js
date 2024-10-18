@@ -129,6 +129,3 @@ document.addEventListener('DOMContentLoaded', function() {
     getWaifu();
     getWeather();
 });
-
-const parsehtml = new DOMParser().parseFromString("<h1>moro</h1>", "text/html");
-document.body.appendChild(parsehtml.body.firstChild);

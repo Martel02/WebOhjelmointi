@@ -102,4 +102,15 @@ img {
   justify-content: center;
   font-weight: bold;
 }
-#8883b8
+
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 10vh;
+  gap: 20px;
+  background-color: #8883b8;
+}
