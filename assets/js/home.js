@@ -63,6 +63,7 @@ formEl.addEventListener('submit', event => {
     axios.post(webhookUrl, formatted_Card)
     .then((response) => {
         console.log(response);
+        alert("Lähetit minulle teams viestiä!");
     })
     .catch((error) => {
         console.error('Error sending message:', error);

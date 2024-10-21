@@ -122,6 +122,48 @@ img {
 }
 
 iframe {
-  width: 500px;
+  width: auto;
   height: auto;
+  padding: 5vh;
 }
+
+footer {
+    
+  background-color: #8883b8;
+  padding: 0.5rem;
+  font-family: 1rem;
+  text-decoration: none;
+
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-content ul{
+  list-style: none;
+}
+.footer-content a{
+  color: #504772;
+  text-decoration: none;
+}
+.footer-content h3{
+  color: #000000;
+  text-decoration: none;
+}
+.footer-content a:hover{
+  text-decoration: underline;
+} 
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.footer-bottom a{
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5c438e;
+  text-decoration: none;
+}
+.footer-bottom a:hover{
+  text-decoration: underline;
+} 
