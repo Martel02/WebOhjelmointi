@@ -310,3 +310,35 @@
       width: 150px;
     }
   }
+
+  @media (max-width: 550px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+
+    .gallery-item {
+      display: grid;
+      grid-template-rows: 3;
+      grid-template-columns: 1;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      justify-content: center;
+      height: 100px;
+      width: 100px
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 100px;
+    }
+  }
