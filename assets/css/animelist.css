@@ -1,124 +1,274 @@
 * {
-  box-sizing: border-box;
-  
+box-sizing: border-box;
+
 }
 
-  /* General body styling */
-  body {
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    height: auto;
-    background-color: #3d334c;
-  }
+/* General body styling */
+body {
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background-color: #3d334c;
+}
+
+main {
+  height: 125vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #8883b8;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+  color: #504772;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #504772;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-weight: bold;
+
+}
+
+.navbar-links a:hover {
+  background-color: #ffffff44;
+  border-radius: 5px;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: auto;
+  row-gap: 200px;
+  align-content: center;
+  justify-content: center;
+}
+
+.gallery-container {
+  text-align: center;
+  justify-content: center;
+
+}
+
+.table-container {
+  text-align: center;
+  justify-content: center;
+  padding: 1vw;
+}
+
+.anime3x3-title {
+  color: #f4bfff;
+}
+
+.peak-manga-title {
+  color: #f4bfff;
+}
+
+.gallery {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, auto));
+  grid-template-rows: repeat(3, minmax(0, auto));
+  gap: 20px;
+  flex-grow: 1;
+  max-height: calc(100vh - 155px); 
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Each gallery item */
+.gallery-item {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  height: 250px;
+  width: 250px
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 250px;
+}
+
+/* Images take all the available space inside their box */
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Caption styling */
+.caption {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #8883b8;
+  font-size: 1.1em;
+  color:  #f4bfff;
+  flex-shrink: 0;
+  grid-row: 1;
+}
+
+table {
+  flex-grow: 1;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 70vh;
+  max-height: 60vh;
+}
+
+tr:nth-child(even) {
+  background-color: #8883b8;
+}
+
+tr:nth-child(odd) {
+  background-color: #63598a;
+}
+
+th {
+  padding: 8px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+  color: #f8d4ff;
+  border-bottom: 2px solid #000000;
+
+}
+
+td {
+  padding: 8px;
+  font-size: 1.4em;
+  text-align: left;
+  color: #f4bfff;
+}
+
+tr:hover {
+  background-color: #ffffff00;
+}
+
+footer {
   
-  main {
-    height: 125vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  /* Navbar styling */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color:  #8883b8;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+  background-color: #8883b8;
+  padding: 0.5rem;
+  font-family: 1rem;
+  text-decoration: none;
+
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-content ul{
+  list-style: none;
+}
+.footer-content a{
+  color: #504772;
+  text-decoration: none;
+}
+.footer-content h3{
+  color: #000000;
+  text-decoration: none;
+}
+.footer-content a:hover{
+  text-decoration: underline;
+} 
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.footer-bottom a{
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5c438e;
+  text-decoration: none;
+}
+.footer-bottom a:hover{
+  text-decoration: underline;
+} 
+
   
-  .navbar-logo {
-    font-size: 1.5em;
-    color: #504772;
-    font-weight: bold;
-  }
-  
+  /* Responsive design for smaller screens */
+@media (max-width: 950px) {
   .navbar-links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-links a {
-    color: #504772;
-    text-decoration: none;
-    padding: 8px 16px;
-    font-weight: bold;
-
-  }
-  
-  .navbar-links a:hover {
-    background-color: #ffffff44;
-    border-radius: 5px;
-  }
-  
-  /* Hamburger menu for mobile */
-  .hamburger {
     display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  
-  .active {
-    display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
-  .grid-table-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: auto;
-    row-gap: 200px;
-    align-content: center;
-    justify-content: center;
-  }
-  
-  .gallery-container {
-    text-align: center;
-    justify-content: center;
-
+  .hamburger {
+    display: block;
   }
 
-  .table-container {
-    text-align: center;
-    justify-content: center;
-    padding: 1vw;
+
+
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 770px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
 
-  .anime3x3-title {
-    color: #f4bfff;
+  .hamburger {
+    display: block;
   }
 
-  .peak-manga-title {
-    color: #f4bfff;
-  }
-  
-  .gallery {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, minmax(0, auto));
-    grid-template-rows: repeat(3, minmax(0, auto));
-    gap: 20px;
-    flex-grow: 1;
-    max-height: calc(100vh - 155px); 
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Each gallery item */
   .gallery-item {
     display: grid;
+    grid-template-rows: 3;
     grid-template-columns: 1;
-    grid-template-rows: 2;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
     justify-content: center;
-    height: 250px;
-    width: 250px
+    height: 200px;
+    width: 200px
   }
 
   .image {
@@ -126,51 +276,21 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 250px;
+    width: 200px;
   }
-  
-  /* Images take all the available space inside their box */
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Caption styling */
-  .caption {
-    padding: 10px;
+
+  .grid-table-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: auto;
+    row-gap: 40px;
+    align-content: center;
     justify-content: center;
-    text-align: center;
-    background-color: #8883b8;
-    font-size: 1.1em;
-    color:  #f4bfff;
-    flex-shrink: 0;
-    grid-row: 1;
   }
-  
-  table {
-    flex-grow: 1;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    max-width: 70vh;
-    max-height: 60vh;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #8883b8;
-  }
-  
-  tr:nth-child(odd) {
-    background-color: #63598a;
-  }
-  
+
   th {
     padding: 8px;
-    font-size: 2em;
+    font-size: 1.9em;
     font-weight: bold;
     text-align: left;
     color: #f8d4ff;
@@ -180,279 +300,159 @@
   
   td {
     padding: 8px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-align: left;
     color: #f4bfff;
   }
-  
-  tr:hover {
-    background-color: #ffffff00;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 650px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
   }
 
-  footer {
-    
+  .hamburger {
+    display: block;
+  }
+
+  .gallery-item {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    width: 150px
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 150px;
+  }
+
+  .caption {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     background-color: #8883b8;
-    padding: 0.5rem;
-    font-family: 1rem;
-    text-decoration: none;
+    font-size: 0.9em;
+    color:  #f4bfff;
+    flex-shrink: 0;
+    grid-row: 1;
+  }
+
+  th {
+    padding: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    color: #f8d4ff;
+    border-bottom: 2px solid #000000;
 
   }
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  
+  td {
+    padding: 8px;
+    font-size: 1.2em;
+    text-align: left;
+    color: #f4bfff;
   }
-  .footer-content ul{
-    list-style: none;
+
+  .anime3x3-title {
+    color: #f4bfff;
+    font-size: 1.5em;
   }
-  .footer-content a{
+
+  .peak-manga-title {
+    color: #f4bfff;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .gallery-item {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    width: 120px
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 120px;
+  }
+
+  .caption {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #8883b8;
+    font-size: 0.7em;
+    color:  #f4bfff;
+    flex-shrink: 0;
+    grid-row: 1;
+  }
+
+  th {
+    padding: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    color: #f8d4ff;
+    border-bottom: 2px solid #000000;
+
+  }
+  
+  td {
+    padding: 8px;
+    font-size: 0.8em;
+    text-align: left;
+    color: #f4bfff;
+  }
+
+  .navbar-logo {
+    font-size: 1em;
     color: #504772;
-    text-decoration: none;
-  }
-  .footer-content h3{
-    color: #000000;
-    text-decoration: none;
-  }
-  .footer-content a:hover{
-    text-decoration: underline;
-  } 
-  .footer-bottom {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-  }
-  .footer-bottom a{
-    text-align: center;
-    font-size: 0.9rem;
-    color: #5c438e;
-    text-decoration: none;
-  }
-  .footer-bottom a:hover{
-    text-decoration: underline;
-  } 
-
-    
-    /* Responsive design for smaller screens */
-  @media (max-width: 950px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-
-
-
+    font-weight: bold;
   }
 
-  /* Responsive design for smaller screens */
-  @media (max-width: 770px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-
-    .gallery-item {
-      display: grid;
-      grid-template-rows: 3;
-      grid-template-columns: 1;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex-direction: column;
-      justify-content: center;
-      height: 200px;
-      width: 200px
-    }
-
-    .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      width: 200px;
-    }
-
-    .grid-table-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: auto;
-      row-gap: 40px;
-      align-content: center;
-      justify-content: center;
-    }
-
-    th {
-      padding: 8px;
-      font-size: 1.9em;
-      font-weight: bold;
-      text-align: left;
-      color: #f8d4ff;
-      border-bottom: 2px solid #000000;
-  
-    }
-    
-    td {
-      padding: 8px;
-      font-size: 1.3em;
-      text-align: left;
-      color: #f4bfff;
-    }
+  .anime3x3-title {
+    color: #f4bfff;
+    font-size: 1.2em;
   }
 
-  /* Responsive design for smaller screens */
-  @media (max-width: 650px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-
-    .gallery-item {
-      display: grid;
-      grid-template-rows: 3;
-      grid-template-columns: 1;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex-direction: column;
-      justify-content: center;
-      height: 150px;
-      width: 150px
-    }
-
-    .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      width: 150px;
-    }
-
-    .caption {
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      background-color: #8883b8;
-      font-size: 0.9em;
-      color:  #f4bfff;
-      flex-shrink: 0;
-      grid-row: 1;
-    }
-
-    th {
-      padding: 8px;
-      font-size: 1.5em;
-      font-weight: bold;
-      text-align: left;
-      color: #f8d4ff;
-      border-bottom: 2px solid #000000;
-  
-    }
-    
-    td {
-      padding: 8px;
-      font-size: 1.2em;
-      text-align: left;
-      color: #f4bfff;
-    }
-
-    .anime3x3-title {
-      color: #f4bfff;
-      font-size: 1.5em;
-    }
-  
-    .peak-manga-title {
-      color: #f4bfff;
-      font-size: 1.5em;
-    }
+  .peak-manga-title {
+    color: #f4bfff;
+    font-size: 1.2em;
   }
-
-  @media (max-width: 550px) {
-    .navbar-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-
-    .gallery-item {
-      display: grid;
-      grid-template-rows: 3;
-      grid-template-columns: 1;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      flex-direction: column;
-      justify-content: center;
-      height: 120px;
-      width: 120px
-    }
-
-    .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      width: 120px;
-    }
-
-    .caption {
-      padding: 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      background-color: #8883b8;
-      font-size: 0.7em;
-      color:  #f4bfff;
-      flex-shrink: 0;
-      grid-row: 1;
-    }
-
-    th {
-      padding: 8px;
-      font-size: 1em;
-      font-weight: bold;
-      text-align: left;
-      color: #f8d4ff;
-      border-bottom: 2px solid #000000;
-  
-    }
-    
-    td {
-      padding: 8px;
-      font-size: 0.8em;
-      text-align: left;
-      color: #f4bfff;
-    }
-
-    .navbar-logo {
-      font-size: 1em;
-      color: #504772;
-      font-weight: bold;
-    }
-
-    .anime3x3-title {
-      color: #f4bfff;
-      font-size: 1.2em;
-    }
-  
-    .peak-manga-title {
-      color: #f4bfff;
-      font-size: 1.2em;
-    }
-  }
+}
