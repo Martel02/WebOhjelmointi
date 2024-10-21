@@ -83,6 +83,14 @@
     justify-content: center;
     padding: 1vw;
   }
+
+  .anime3x3-title {
+    color: #f4bfff;
+  }
+
+  .peak-manga-title {
+    color: #f4bfff;
+  }
   
   .gallery {
     display: grid;
@@ -381,5 +389,15 @@
       font-size: 1em;
       color: #504772;
       font-weight: bold;
+    }
+
+    .anime3x3-title {
+      color: #f4bfff;
+      font-size: 1em;
+    }
+  
+    .peak-manga-title {
+      color: #f4bfff;
+      font-size: 1em;
     }
   }
