@@ -21,14 +21,23 @@ function getWaifu() {
 }
 
 function getWeather() {
-    fetch(lampoUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data.current.temperature_2m);
-      lampo.innerText = data.current.temperature_2m;
-    })
-    .catch((error) => {
-      console.error('Error fetching temperature:', error);
+    return new Promise((resolve, reject) => {
+        fetch(lampoUrl)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const temperature = data.current.temperature_2m;
+                lampo.innerText = temperature;
+                resolve(temperature); // Resolve the promise with the temperature
+            })
+            .catch((error) => {
+                console.error('Error fetching temperature:', error);
+                reject(error); // Reject the promise on error
+            });
     });
 }
 
@@ -68,12 +77,8 @@ formEl.addEventListener('submit', event => {
     .catch((error) => {
         console.error('Error sending message:', error);
     });
-
-
 });
 
-// Here we define our query as a multi-line string
-// Storing it in a separate .graphql/.gql file is also possible
 var query = `
 query Character ($id: Int){
     Character(id: $id) {
@@ -84,10 +89,8 @@ query Character ($id: Int){
 }
 `;
 
-// Define our query variables and values that will be used in the query request
 var variables = { id: 734 };
 
-// Define the config we'll need for our Api request
 options = {
     method: 'POST',
     headers: {
@@ -100,7 +103,6 @@ options = {
     })
 };
 
-// Make the HTTP Api request
 function AniListAPI() {
   fetch(url, options).then(handleResponse)
   .then(handleData)
