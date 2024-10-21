@@ -124,6 +124,11 @@ function handleError(error) {
 
 }
 
+document.getElementById('hamburger').addEventListener('click', function() {
+    var navbarLinks = document.getElementById('navbarLinks');
+    navbarLinks.classList.toggle('active');
+});
+
 waifuButton.addEventListener('click', AniListAPI);
 
 document.addEventListener('DOMContentLoaded', function() { 
