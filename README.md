@@ -139,10 +139,13 @@ I have error handling for the same Fetch for the AniList API at lines 110-125.
 
 ### 5/5: Effective use of asynchronous data to enhance user experience (like filtering, sorting)
 
+Used promise handling for fetching data from a weather API lines 23-42 home.js
+
+Use a lot of general asynchronous data in home.js for dynamically updating data in html elements.
 
 ## API Reference
 
-#### Weather
+#### Weather API
 I used a free weather API to get the temperature in Oulu.
 
 API website: https://open-meteo.com
@@ -151,11 +154,6 @@ API website: https://open-meteo.com
 I just use it to fetch a picture of a character to display on the site when a button is clicked.
 
 API Docs: https://docs.anilist.co/
-
-
-
-
-
 
 ## Authors
 
