@@ -119,3 +119,19 @@ footer {
 .footer-bottom a:hover{
   text-decoration: underline;
 } 
+
+@media (max-width: 950px) {
+  .navbar-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+}
