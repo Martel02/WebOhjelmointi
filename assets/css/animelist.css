@@ -234,17 +234,18 @@ footer {
   /* Responsive design for smaller screens */
 @media (max-width: 950px) {
   .navbar-links {
-    display: none;
+    display: none; /* Hidden by default */
     flex-direction: column;
     width: 100%;
   }
 
-  .hamburger {
-    display: block;
+  .navbar-links.active {
+    display: flex; /* Show when active */
   }
 
-
-
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
 }
 
 /* Responsive design for smaller screens */
