@@ -376,4 +376,10 @@
       text-align: left;
       color: #f4bfff;
     }
+
+    .navbar-logo {
+      font-size: 1em;
+      color: #504772;
+      font-weight: bold;
+    }
   }
