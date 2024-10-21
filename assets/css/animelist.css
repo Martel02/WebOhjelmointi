@@ -205,7 +205,11 @@
     list-style: none;
   }
   .footer-content a{
-    color: white;
+    color: #504772;
+    text-decoration: none;
+  }
+  .footer-content h3{
+    color: #000000;
     text-decoration: none;
   }
   .footer-content a:hover{
