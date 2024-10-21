@@ -190,12 +190,10 @@ tr:hover {
 }
 
 footer {
-  
   background-color: #8883b8;
   padding: 0.5rem;
   font-family: 1rem;
   text-decoration: none;
-
 }
 .footer-content {
   max-width: 1200px;
@@ -228,7 +226,7 @@ footer {
 }
 .footer-bottom a:hover{
   text-decoration: underline;
-} 
+}
 
   
   /* Responsive design for smaller screens */
@@ -246,6 +244,7 @@ footer {
   .hamburger {
     display: block; /* Show hamburger icon */
   }
+
 }
 
 /* Responsive design for smaller screens */
