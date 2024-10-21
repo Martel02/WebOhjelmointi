@@ -72,3 +72,8 @@
   flex-direction: row;
   justify-content: center;
 }
+
+iframe {
+  width: 100%;
+  align-items: center;
+}
