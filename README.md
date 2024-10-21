@@ -74,7 +74,7 @@ animelist.css lines 53-56 and 151-153
 ## JavaScript Basics (25%)
 
 ### 1/5: Simple interactions (like alerts on button click).  
-I have an alert on a button click in home.js line 66. The button being in home.html line 59. It submits the message written in the message box and sends it to my teams :D
+I have an alert on a button click in home.js line 75. The button being in home.html line 59. It submits the message written in the message box and sends it to my teams :D
 
 ### 2/5: Multiple event listeners and basic DOM manipulations.  
 
@@ -84,10 +84,10 @@ portfolio.js lines 29-32
 
 animelist.js lines 17-20
 
-home.js lines 127-130, 132 and 134-137
+home.js lines 129-132, 134 and 136-139
 
 #### Basic DOM manipulations
-home.js lines 127-130 (DOM manipulation for toggling the hamburger menu on and off)
+home.js lines 129-132 (DOM manipulation for toggling the hamburger menu on and off)
 
 animelist.js lines 9-15 (DOM manipulation for inserting data into a table)
 
@@ -105,20 +105,20 @@ Advanced logic like switch cases and for loops are used in portfolio.js and anim
 animelist.js lines 9-15
 
 #### Dynamic DOM updates
-You can see dynamic DOM updates in home.js lines 127-130 (DOM manipulation for toggling the hamburger menu on and off)
+You can see dynamic DOM updates in home.js lines 129-132 (DOM manipulation for toggling the hamburger menu on and off)
 
 Also the event listeners I mentioned earlier do dynamic DOM updates.(portfolio.js lines 29-32,
 animelist.js lines 17-20,
-home.js lines 127-130, 132 and 134-137)
+home.js lines 129-132, 134 and 136-139)
 
 ### 5/5: Consistent use of Object-Oriented JavaScript principles. 
 I heavily utilize objects and use object-oriented javascript principles throughout the home.js file but here are some example lines:
 
-line 55
+line 64
 
-lines 91-101
+lines 82-127
 
-line 118
+line 44-80
 
 ---
 
@@ -129,13 +129,13 @@ portfolio.js lines 3-27. I use a timer to have a countdown and load the page aft
 
 ### 2/5: Successful implementation of an AJAX call or Fetch.  
 Successfully implemented Fetch from AniList API in home.js:
-lines 77-125.
+lines 82-127.
 
 ### 3/5: Data from the asynchronous call is displayed on the webpage.
 The same Fetch data from the AniList API is displayed on the website.
 
 ### 4/5: Error handling is implemented (for failed API calls, etc.). 
-I have error handling for the same Fetch for the AniList API at lines 110-125.
+I have error handling for the same Fetch for the AniList API at lines 106-127.
 
 ### 5/5: Effective use of asynchronous data to enhance user experience (like filtering, sorting)
 
