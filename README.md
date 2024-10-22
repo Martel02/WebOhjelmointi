@@ -112,7 +112,7 @@ animelist.js lines 17-20,
 home.js lines 129-132, 134 and 136-139)
 
 ### 5/5: Consistent use of Object-Oriented JavaScript principles. 
-I heavily utilize objects and use object-oriented javascript principles throughout the home.js file but here are some example lines:
+I utilize objects and use object-oriented javascript principles throughout the home.js file but here are some example lines:
 
 line 64
 
